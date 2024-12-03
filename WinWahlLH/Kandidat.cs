@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinWahlLFH
 {
-    internal class Kandidat
+    public class Kandidat
     {
         private int id;
         private string name;

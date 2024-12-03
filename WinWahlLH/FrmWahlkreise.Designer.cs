@@ -42,6 +42,7 @@
             WahlkreisOrtBox = new TextBox();
             BtnWahlkreisAdd = new Button();
             btnLoeschenWahlkreis = new Button();
+            btnStimmzettel = new Button();
             GrpWahlkreiseBearbeiten.SuspendLayout();
             GrpEditKandidaten.SuspendLayout();
             SuspendLayout();
@@ -51,7 +52,7 @@
             WahlkreiseListBox.FormattingEnabled = true;
             WahlkreiseListBox.Location = new Point(31, 44);
             WahlkreiseListBox.Name = "WahlkreiseListBox";
-            WahlkreiseListBox.Size = new Size(311, 304);
+            WahlkreiseListBox.Size = new Size(419, 304);
             WahlkreiseListBox.TabIndex = 0;
             WahlkreiseListBox.SelectedIndexChanged += WahlkreiseListBox_SelectedIndexChanged;
             // 
@@ -64,7 +65,7 @@
             GrpWahlkreiseBearbeiten.Controls.Add(WahlkreisSpeichernBtn);
             GrpWahlkreiseBearbeiten.Controls.Add(OrtNameLabel);
             GrpWahlkreiseBearbeiten.Controls.Add(WahlkreisOrtBox);
-            GrpWahlkreiseBearbeiten.Location = new Point(429, 44);
+            GrpWahlkreiseBearbeiten.Location = new Point(503, 44);
             GrpWahlkreiseBearbeiten.Name = "GrpWahlkreiseBearbeiten";
             GrpWahlkreiseBearbeiten.Size = new Size(322, 348);
             GrpWahlkreiseBearbeiten.TabIndex = 1;
@@ -179,7 +180,7 @@
             // 
             // btnLoeschenWahlkreis
             // 
-            btnLoeschenWahlkreis.Location = new Point(184, 363);
+            btnLoeschenWahlkreis.Location = new Point(176, 363);
             btnLoeschenWahlkreis.Name = "btnLoeschenWahlkreis";
             btnLoeschenWahlkreis.Size = new Size(94, 29);
             btnLoeschenWahlkreis.TabIndex = 3;
@@ -187,11 +188,22 @@
             btnLoeschenWahlkreis.UseVisualStyleBackColor = true;
             btnLoeschenWahlkreis.Click += btnLoeschenWahlkreis_Click;
             // 
+            // btnStimmzettel
+            // 
+            btnStimmzettel.Location = new Point(284, 363);
+            btnStimmzettel.Name = "btnStimmzettel";
+            btnStimmzettel.Size = new Size(166, 29);
+            btnStimmzettel.TabIndex = 4;
+            btnStimmzettel.Text = "Stimmzettel ausfüllen";
+            btnStimmzettel.UseVisualStyleBackColor = true;
+            btnStimmzettel.Click += btnStimmzettel_Click;
+            // 
             // FrmWahlkreise
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(939, 450);
+            Controls.Add(btnStimmzettel);
             Controls.Add(btnLoeschenWahlkreis);
             Controls.Add(BtnWahlkreisAdd);
             Controls.Add(GrpWahlkreiseBearbeiten);
@@ -221,5 +233,6 @@
         private GroupBox GrpEditKandidaten;
         private Label LblId;
         private TextBox IdBox;
+        private Button btnStimmzettel;
     }
 }

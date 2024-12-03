@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 
 using System.Linq;
-
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 using System.Threading.Tasks;
@@ -14,7 +14,7 @@ namespace WinWahlLFH
 
 {
 
-    internal class Wahlkreis
+    public class Wahlkreis
 
     {
 
@@ -23,6 +23,8 @@ namespace WinWahlLFH
         private string name;
 
         private int wahlkreisID;
+
+        private List<Kandidat> kandidaten;
 
         public Wahlkreis(string name, int id, int anzahlWahlberechtigte)
 
@@ -34,6 +36,15 @@ namespace WinWahlLFH
 
             this.anzahlWahlberechtigte = anzahlWahlberechtigte;
 
+            this.kandidaten = new List<Kandidat>(Program.alleKandidaten);
+
+        }
+        public Wahlkreis(Wahlkreis wahlkreis)
+        {
+            this.wahlkreisID = wahlkreis.wahlkreisID;
+            this.anzahlWahlberechtigte = wahlkreis.anzahlWahlberechtigte;
+            this.name = wahlkreis.name;
+            this.kandidaten = wahlkreis.kandidaten;
         }
 
         public string Name => $"{this.wahlkreisID}: {this.name} | {this.anzahlWahlberechtigte}";
@@ -84,6 +95,11 @@ namespace WinWahlLFH
 
             this.anzahlWahlberechtigte = anzahlWahlberechtigte;
 
+        }
+        public List<Kandidat> Kandidaten
+        {
+            get { return this.kandidaten; }
+            set { this.kandidaten = value; }
         }
 
 

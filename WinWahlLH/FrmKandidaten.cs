@@ -13,15 +13,23 @@ namespace WinWahlLFH
 {
     public partial class FrmKandidaten : Form
     {
+        private List<Kandidat> kandidaten;
         public FrmKandidaten()
         {
+            this.kandidaten = Program.alleKandidaten;
+            InitializeComponent();
+            UpdateKandidaten();
+        }
+        public FrmKandidaten(List<Kandidat> kandidaten)
+        {
+            this.kandidaten = kandidaten;
             InitializeComponent();
             UpdateKandidaten();
         }
 
         private void UpdateKandidaten()
         {
-            foreach (Kandidat kandidat in Program.alleKandidaten)
+            foreach (Kandidat kandidat in kandidaten)
             {
                 KandidatenListBox.Items.Add(kandidat.Name);
             }
@@ -36,7 +44,7 @@ namespace WinWahlLFH
                 IdBox.Enabled = true;
                 int id = Convert.ToInt16(Convert.ToString(KandidatenListBox.SelectedItem).Substring(0, Convert.ToString(KandidatenListBox.SelectedItem).IndexOf(":")));
                 Kandidat kandidat;
-                foreach (Kandidat k in Program.alleKandidaten)
+                foreach (Kandidat k in kandidaten)
                 {
                     if (k.getId() == id)
                     {
@@ -77,7 +85,7 @@ namespace WinWahlLFH
             {
                 if (KandidatenIdBox.Text == "")
                 {
-                    Program.alleKandidaten.Add(new Kandidat(Program.alleKandidaten.Count() + 1, KandidatenNameBox.Text, Convert.ToInt16(KandidatAlterBox.Text), KandidatBerufBox.Text));
+                    kandidaten.Add(new Kandidat(Program.alleKandidaten.Count() + 1, KandidatenNameBox.Text, Convert.ToInt16(KandidatAlterBox.Text), KandidatBerufBox.Text));
                     KandidatenNameBox.Text = "";
                     KandidatAlterBox.Text = "";
                     KandidatBerufBox.Text = "";
@@ -87,7 +95,7 @@ namespace WinWahlLFH
                     kandidatenEditBox.Enabled = false;
                     kandidatenEditBox.Visible = false;
                     KandidatenListBox.Items.Clear();
-                    foreach (Kandidat kandidat in Program.alleKandidaten)
+                    foreach (Kandidat kandidat in kandidaten)
                     {
                         KandidatenListBox.Items.Add(kandidat.Name);
                     }
@@ -96,7 +104,7 @@ namespace WinWahlLFH
                 {
                     try
                     {
-                        foreach (Kandidat kandidat in Program.alleKandidaten)
+                        foreach (Kandidat kandidat in kandidaten)
                         {
                             if (kandidat.getId() == Convert.ToInt16(KandidatenIdBox.Text))
                             {
@@ -115,7 +123,7 @@ namespace WinWahlLFH
                         kandidatenEditBox.Enabled = false;
                         kandidatenEditBox.Visible = false;
                         KandidatenListBox.Items.Clear();
-                        foreach (Kandidat kandidat in Program.alleKandidaten)
+                        foreach (Kandidat kandidat in kandidaten)
                         {
                             KandidatenListBox.Items.Add(kandidat.Name);
                         }
@@ -149,16 +157,16 @@ namespace WinWahlLFH
         {
             int id = Convert.ToInt16(Convert.ToString(KandidatenListBox.SelectedItem).Substring(0, Convert.ToString(KandidatenListBox.SelectedItem).IndexOf(":")));
             Kandidat k = new Kandidat(-1, "", -1, "");
-            foreach(Kandidat kandidat in Program.alleKandidaten)
+            foreach(Kandidat kandidat in kandidaten)
             {
                 if (kandidat.getId() == id)
                 {
                     k = kandidat;
                 }
             }
-            Program.alleKandidaten.Remove(k);
+            kandidaten.Remove(k);
             KandidatenListBox.Items.Clear();
-            foreach (Kandidat kandidat in Program.alleKandidaten)
+            foreach (Kandidat kandidat in kandidaten)
             {
                 KandidatenListBox.Items.Add(kandidat.Name);
             }

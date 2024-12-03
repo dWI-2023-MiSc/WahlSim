@@ -42,7 +42,6 @@
             btnNeu = new Button();
             btnLoeschen = new Button();
             btnFormularAnzeigen = new Button();
-            btnStimmzettel = new Button();
             grpWahl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numMaxStimmen).BeginInit();
             SuspendLayout();
@@ -73,6 +72,7 @@
             grpWahl.TabIndex = 2;
             grpWahl.TabStop = false;
             grpWahl.Text = "Details";
+            grpWahl.Visible = false;
             // 
             // btBearbeiten
             // 
@@ -181,22 +181,11 @@
             btnFormularAnzeigen.UseVisualStyleBackColor = true;
             btnFormularAnzeigen.Click += btnFormularAnzeigen_Click;
             // 
-            // btnStimmzettel
-            // 
-            btnStimmzettel.Location = new Point(401, 392);
-            btnStimmzettel.Name = "btnStimmzettel";
-            btnStimmzettel.Size = new Size(132, 29);
-            btnStimmzettel.TabIndex = 42;
-            btnStimmzettel.Text = "Simmzettel";
-            btnStimmzettel.UseVisualStyleBackColor = true;
-            btnStimmzettel.Click += btnStimmzettel_Click;
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(747, 468);
-            Controls.Add(btnStimmzettel);
             Controls.Add(btnFormularAnzeigen);
             Controls.Add(btnLoeschen);
             Controls.Add(btnNeu);
@@ -231,6 +220,5 @@
         private Button btnAbbrechen;
         private Button btBearbeiten;
         private Button btnFormularAnzeigen;
-        private Button btnStimmzettel;
     }
 }

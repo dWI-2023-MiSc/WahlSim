@@ -15,16 +15,19 @@ namespace WinWahlLFH
         private uint _maxStimmen;
         private DateTime _termin;
         private string _beschreibung = string.Empty;
+        private List<Wahlkreis> _wahlkreise;
 
         public Wahl()
         {
             this._titel = string.Empty;
+            this._wahlkreise = new List<Wahlkreis>();
         }
 
         public Wahl(string titel, uint maxStimmen)
         {
             this._titel = titel;
             this._maxStimmen = maxStimmen;
+            this._wahlkreise = new List<Wahlkreis>();
         }
 
         public Wahl(string titel, uint maxStimmen, DateTime termin, uint id)
@@ -33,6 +36,7 @@ namespace WinWahlLFH
             this._maxStimmen = maxStimmen;
             this._termin = termin;
             this._id = id;
+            this._wahlkreise = new List<Wahlkreis> (Program.alleWahlkreise);
         }
 
         public void SetTitel(string titel)
@@ -81,5 +85,11 @@ namespace WinWahlLFH
             get { return _beschreibung; }
             set { _beschreibung = value; }
         }
+        public List<Wahlkreis> Wahlkreise
+        {
+            get { return this._wahlkreise; }
+            set { this._wahlkreise = value; }
+        }
+
     }
 }

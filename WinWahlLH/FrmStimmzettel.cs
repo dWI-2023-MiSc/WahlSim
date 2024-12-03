@@ -35,7 +35,7 @@ namespace WinWahlLFH
 
         private void InitStimmzettel()
         {
-            for (int kandidat = 0; kandidat < _stimmzettel.MaxKandidaten; kandidat++)
+            for (int kandidat = 0; kandidat < _stimmzettel.Kandidaten.Count; kandidat++)
             {
                 GroupBox grbKandidat = new GroupBox();
                 grbKandidat.Location = new Point(32, kandidat * 110 + 12);
@@ -43,7 +43,7 @@ namespace WinWahlLFH
                 grbKandidat.Size = new Size(300, 85);
                 grbKandidat.TabIndex = 0;
                 grbKandidat.TabStop = false;
-                grbKandidat.Text = Program.alleKandidaten[kandidat].getName();
+                grbKandidat.Text = _stimmzettel.Kandidaten[kandidat].getName();
 
                 for (int stimme = 0; stimme < _stimmzettel.MaxStimmen; stimme++)
                 {
