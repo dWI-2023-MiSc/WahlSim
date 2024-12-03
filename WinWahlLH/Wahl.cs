@@ -14,6 +14,7 @@ namespace WinWahlLFH
         private string _titel;
         private uint _maxStimmen;
         private DateTime _termin;
+        private string _beschreibung = string.Empty;
 
         public Wahl()
         {
@@ -74,6 +75,11 @@ namespace WinWahlLFH
             set { _id = value; }
         }
 
-
+        // Kurzbeschreibung der Wahl
+        public string Beschreibung
+        {
+            get { return _beschreibung; }
+            set { _beschreibung = value; }
+        }
     }
 }

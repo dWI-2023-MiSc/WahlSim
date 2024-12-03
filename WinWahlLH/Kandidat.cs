@@ -21,7 +21,7 @@ namespace WinWahlLFH
             this.alter = alter;
             this.beruf = beruf;
         }
-        
+
         public string Name => $"{this.id}: {this.name} | {this.alter} | {this.beruf}";
 
         public int getId()

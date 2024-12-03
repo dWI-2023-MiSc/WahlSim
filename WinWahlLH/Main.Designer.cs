@@ -33,7 +33,7 @@
             btBearbeiten = new Button();
             btnAbbrechen = new Button();
             btnSpeichern = new Button();
-            numTermin = new NumericUpDown();
+            numMaxStimmen = new NumericUpDown();
             lblTermin = new Label();
             dtpTermin = new DateTimePicker();
             lblMaxStimmen = new Label();
@@ -41,10 +41,10 @@
             txtTitel = new TextBox();
             btnNeu = new Button();
             btnLoeschen = new Button();
-            WahlkreiseEditBtn = new Button();
-            KandidatenEditBtn = new Button();
+            btnFormularAnzeigen = new Button();
+            btnStimmzettel = new Button();
             grpWahl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numTermin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numMaxStimmen).BeginInit();
             SuspendLayout();
             // 
             // lstWahlen
@@ -61,7 +61,7 @@
             grpWahl.Controls.Add(btBearbeiten);
             grpWahl.Controls.Add(btnAbbrechen);
             grpWahl.Controls.Add(btnSpeichern);
-            grpWahl.Controls.Add(numTermin);
+            grpWahl.Controls.Add(numMaxStimmen);
             grpWahl.Controls.Add(lblTermin);
             grpWahl.Controls.Add(dtpTermin);
             grpWahl.Controls.Add(lblMaxStimmen);
@@ -79,7 +79,7 @@
             btBearbeiten.Location = new Point(38, 313);
             btBearbeiten.Name = "btBearbeiten";
             btBearbeiten.Size = new Size(147, 29);
-            btBearbeiten.TabIndex = 9;
+            btBearbeiten.TabIndex = 7;
             btBearbeiten.Text = "Wahl bearbeiten";
             btBearbeiten.UseVisualStyleBackColor = true;
             btBearbeiten.Click += btBearbeiten_Click;
@@ -89,7 +89,7 @@
             btnAbbrechen.Location = new Point(144, 237);
             btnAbbrechen.Name = "btnAbbrechen";
             btnAbbrechen.Size = new Size(94, 29);
-            btnAbbrechen.TabIndex = 8;
+            btnAbbrechen.TabIndex = 6;
             btnAbbrechen.Text = "Abbrechen";
             btnAbbrechen.UseVisualStyleBackColor = true;
             btnAbbrechen.Click += btnAbbrechen_Click;
@@ -99,17 +99,17 @@
             btnSpeichern.Location = new Point(38, 236);
             btnSpeichern.Name = "btnSpeichern";
             btnSpeichern.Size = new Size(94, 29);
-            btnSpeichern.TabIndex = 7;
+            btnSpeichern.TabIndex = 5;
             btnSpeichern.Text = "Speichern";
             btnSpeichern.UseVisualStyleBackColor = true;
             btnSpeichern.Click += btnSpeichern_Click;
             // 
-            // numTermin
+            // numMaxStimmen
             // 
-            numTermin.Location = new Point(40, 118);
-            numTermin.Name = "numTermin";
-            numTermin.Size = new Size(132, 27);
-            numTermin.TabIndex = 6;
+            numMaxStimmen.Location = new Point(40, 118);
+            numMaxStimmen.Name = "numMaxStimmen";
+            numMaxStimmen.Size = new Size(132, 27);
+            numMaxStimmen.TabIndex = 3;
             // 
             // lblTermin
             // 
@@ -150,14 +150,14 @@
             txtTitel.Location = new Point(38, 56);
             txtTitel.Name = "txtTitel";
             txtTitel.Size = new Size(250, 27);
-            txtTitel.TabIndex = 0;
+            txtTitel.TabIndex = 2;
             // 
             // btnNeu
             // 
             btnNeu.Location = new Point(26, 392);
             btnNeu.Name = "btnNeu";
             btnNeu.Size = new Size(94, 29);
-            btnNeu.TabIndex = 3;
+            btnNeu.TabIndex = 1;
             btnNeu.Text = "Neue Wahl";
             btnNeu.UseVisualStyleBackColor = true;
             btnNeu.Click += btnNeu_Click;
@@ -167,49 +167,51 @@
             btnLoeschen.Location = new Point(126, 392);
             btnLoeschen.Name = "btnLoeschen";
             btnLoeschen.Size = new Size(94, 29);
-            btnLoeschen.TabIndex = 4;
+            btnLoeschen.TabIndex = 40;
             btnLoeschen.Text = "Löschen";
             btnLoeschen.UseVisualStyleBackColor = true;
             // 
-            // WahlkreiseEditBtn
+            // btnFormularAnzeigen
             // 
-            WahlkreiseEditBtn.Location = new Point(513, 392);
-            WahlkreiseEditBtn.Name = "WahlkreiseEditBtn";
-            WahlkreiseEditBtn.Size = new Size(211, 29);
-            WahlkreiseEditBtn.TabIndex = 5;
-            WahlkreiseEditBtn.Text = "Zeige Wahlkreise";
-            WahlkreiseEditBtn.UseVisualStyleBackColor = true;
-            WahlkreiseEditBtn.Click += WahlkreiseEditBtn_Click;
+            btnFormularAnzeigen.Location = new Point(561, 392);
+            btnFormularAnzeigen.Name = "btnFormularAnzeigen";
+            btnFormularAnzeigen.Size = new Size(163, 29);
+            btnFormularAnzeigen.TabIndex = 41;
+            btnFormularAnzeigen.Text = "Formular anzeigen";
+            btnFormularAnzeigen.UseVisualStyleBackColor = true;
+            btnFormularAnzeigen.Click += btnFormularAnzeigen_Click;
             // 
-            // KandidatenEditBtn
+            // btnStimmzettel
             // 
-            KandidatenEditBtn.Location = new Point(513, 430);
-            KandidatenEditBtn.Name = "KandidatenEditBtn";
-            KandidatenEditBtn.RightToLeft = RightToLeft.Yes;
-            KandidatenEditBtn.Size = new Size(211, 29);
-            KandidatenEditBtn.TabIndex = 6;
-            KandidatenEditBtn.Text = "Zeige Kandidaten";
-            KandidatenEditBtn.UseVisualStyleBackColor = true;
-            KandidatenEditBtn.Click += KandidatenEditBtn_Click;
+            btnStimmzettel.Location = new Point(401, 392);
+            btnStimmzettel.Name = "btnStimmzettel";
+            btnStimmzettel.Size = new Size(132, 29);
+            btnStimmzettel.TabIndex = 42;
+            btnStimmzettel.Text = "Simmzettel";
+            btnStimmzettel.UseVisualStyleBackColor = true;
+            btnStimmzettel.Click += btnStimmzettel_Click;
             // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(747, 468);
-            Controls.Add(KandidatenEditBtn);
-            Controls.Add(WahlkreiseEditBtn);
+            Controls.Add(btnStimmzettel);
+            Controls.Add(btnFormularAnzeigen);
             Controls.Add(btnLoeschen);
             Controls.Add(btnNeu);
             Controls.Add(grpWahl);
             Controls.Add(lstWahlen);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WinWahl LFH";
             Load += frmMain_Load;
             grpWahl.ResumeLayout(false);
             grpWahl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numTermin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numMaxStimmen).EndInit();
             ResumeLayout(false);
         }
 
@@ -222,13 +224,13 @@
         private Label lblMaxStimmen;
         private Label lblTermin;
         private DateTimePicker dtpTermin;
-        private NumericUpDown numTermin;
+        private NumericUpDown numMaxStimmen;
         private Button btnNeu;
         private Button btnLoeschen;
         private Button btnSpeichern;
         private Button btnAbbrechen;
         private Button btBearbeiten;
-        private Button WahlkreiseEditBtn;
-        private Button KandidatenEditBtn;
+        private Button btnFormularAnzeigen;
+        private Button btnStimmzettel;
     }
 }

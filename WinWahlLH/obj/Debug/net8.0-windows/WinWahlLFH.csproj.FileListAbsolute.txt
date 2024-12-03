@@ -14,11 +14,15 @@ D:\Projekte\VS\ACS2024-A2\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.pdb
 D:\Projekte\VS\ACS2024-A2\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.genruntimeconfig.cache
 D:\Projekte\VS\ACS2024-A2\WinWahlLH\obj\Debug\net8.0-windows\ref\WinWahlLFH.dll
 D:\Projekte\VS\ACS2024-A2\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.frmMain.resources
+D:\Projekte\VS\ACS2024-A2\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.FrmWahl.resources
+D:\Projekte\VS\ACS2024-A2\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.FrmStimmzettel.resources
 C:\prg\Main\VSProjekte\WinWahlLH\bin\Debug\net8.0-windows\WinWahlLFH.exe
 C:\prg\Main\VSProjekte\WinWahlLH\bin\Debug\net8.0-windows\WinWahlLFH.deps.json
 C:\prg\Main\VSProjekte\WinWahlLH\bin\Debug\net8.0-windows\WinWahlLFH.runtimeconfig.json
 C:\prg\Main\VSProjekte\WinWahlLH\bin\Debug\net8.0-windows\WinWahlLFH.dll
 C:\prg\Main\VSProjekte\WinWahlLH\bin\Debug\net8.0-windows\WinWahlLFH.pdb
+C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.FrmStimmzettel.resources
+C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.FrmWahl.resources
 C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.frmMain.resources
 C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.csproj.GenerateResource.cache
 C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.GeneratedMSBuildEditorConfig.editorconfig
@@ -30,5 +34,5 @@ C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\refint\WinWahlLFH.dll
 C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.pdb
 C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.genruntimeconfig.cache
 C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\ref\WinWahlLFH.dll
-C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.Wahlkreise.resources
-C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.Kandidaten.resources
+C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.FrmKandidaten.resources
+C:\prg\Main\VSProjekte\WinWahlLH\obj\Debug\net8.0-windows\WinWahlLFH.FrmWahlkreise.resources
