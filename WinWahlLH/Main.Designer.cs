@@ -106,9 +106,9 @@
             // 
             // numMaxStimmen
             // 
-            numMaxStimmen.Location = new Point(40, 118);
+            numMaxStimmen.Location = new Point(40, 117);
             numMaxStimmen.Name = "numMaxStimmen";
-            numMaxStimmen.Size = new Size(132, 27);
+            numMaxStimmen.Size = new Size(133, 27);
             numMaxStimmen.TabIndex = 3;
             // 
             // lblTermin
@@ -170,6 +170,7 @@
             btnLoeschen.TabIndex = 40;
             btnLoeschen.Text = "Löschen";
             btnLoeschen.UseVisualStyleBackColor = true;
+            btnLoeschen.Click += btnLoeschen_Click;
             // 
             // btnFormularAnzeigen
             // 
@@ -179,6 +180,7 @@
             btnFormularAnzeigen.TabIndex = 41;
             btnFormularAnzeigen.Text = "Formular anzeigen";
             btnFormularAnzeigen.UseVisualStyleBackColor = true;
+            btnFormularAnzeigen.Visible = false;
             btnFormularAnzeigen.Click += btnFormularAnzeigen_Click;
             // 
             // frmMain

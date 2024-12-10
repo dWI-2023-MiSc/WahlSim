@@ -10,10 +10,16 @@
     <Compile Update="FrmKandidaten.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Kandidaten.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FrmWahlkreise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Wahlkreise.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

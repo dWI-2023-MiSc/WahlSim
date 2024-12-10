@@ -15,17 +15,21 @@ namespace WinWahlLFH
         static void Main()
         {
             
-
+            //  Eine Liste von Objekten der Klasse Kandidat wird erstellt und mit Einträgen gefüllt
             alleKandidaten = new List<Kandidat>();
             alleKandidaten.Add(new Kandidat(alleKandidaten.Count() + 1, "Annika Ahlers", 11, "Arzt"));
             alleKandidaten.Add(new Kandidat(alleKandidaten.Count() + 1, "Bettina Busch", 22, "Bäcker"));
             alleKandidaten.Add(new Kandidat(alleKandidaten.Count() + 1, "Chris Clark", 33, "Chemiker"));
 
+
+            //  Eine Liste von Objekten der Klasse Wahlkreis wird erstellt und mit Einträgen gefüllt
             alleWahlkreise = new List<Wahlkreis>();
             alleWahlkreise.Add(new Wahlkreis("Aachen", alleWahlkreise.Count() + 1, 1111));
             alleWahlkreise.Add(new Wahlkreis("Bremen", alleWahlkreise.Count() + 1, 2222));
             alleWahlkreise.Add(new Wahlkreis("Chemnitz", alleWahlkreise.Count() + 1, 3333));
 
+
+            //  Eine Liste von Objekten der Klasse Wahl wird erstellt und mit Einträgen gefüllt
             alleWahlen = new List<Wahl>();
             alleWahlen.Add(new Wahl("Bundestagswahl 2025", 4, new DateTime(2025, 3, 13), 1));
             alleWahlen.Add(new Wahl("Sachsen-Anhalt 2025", 4, new DateTime(2025, 9, 25), 2));
