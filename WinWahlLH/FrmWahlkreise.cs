@@ -15,7 +15,6 @@ namespace WinWahlLFH
         private List<Wahlkreis> wahlkreise;
         private ushort maxStimmen;
 
-        private List<Stimmzettel> _stimmzettelListe = new List<Stimmzettel>();
         public FrmWahlkreise()
         {
             this.wahlkreise = Program.alleWahlkreise;
@@ -55,11 +54,11 @@ namespace WinWahlLFH
                     result = frmStimmzettel.ShowDialog();
                     if (result != DialogResult.Cancel)
                     {
-                        _stimmzettelListe.Add(frmStimmzettel.Stimmzettel());
+                        wahlkreise[WahlkreiseListBox.SelectedIndex].Stimmzettel.Add(frmStimmzettel.Stimmzettel());
                     }
                 }
 
-                MessageBox.Show($"Es wurden insgesamt {_stimmzettelListe.Count} Stimmzettel erfasst.");
+                MessageBox.Show($"Es wurden insgesamt {wahlkreise[WahlkreiseListBox.SelectedIndex].Stimmzettel.Count} Stimmzettel erfasst.");
             }
             
 

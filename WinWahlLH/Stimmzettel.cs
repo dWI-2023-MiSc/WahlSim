@@ -12,7 +12,9 @@ namespace WinWahlLFH
         private ushort _maxStimmen = 0;
         private ushort _stimmen = 0;
         private bool _gueltig = false;
-        private List<Kandidat> _kandidaten= new List<Kandidat>();
+        private List<Kandidat> _kandidaten = new List<Kandidat>();
+        
+        
 
         public ushort MaxKandidaten
         {
@@ -44,6 +46,6 @@ namespace WinWahlLFH
             set { this._kandidaten = value; }
         }
 
-        // ToDo: Kandidaten
+        
     }
 }

@@ -67,6 +67,7 @@
             bntNaechsterStimmzettel.TabIndex = 2;
             bntNaechsterStimmzettel.Text = "nächster Stimmzettel";
             bntNaechsterStimmzettel.UseVisualStyleBackColor = false;
+            bntNaechsterStimmzettel.Click += bntNaechsterStimmzettel_Click;
             // 
             // FrmStimmzettel
             // 

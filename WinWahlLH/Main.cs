@@ -79,7 +79,7 @@ namespace WinWahlLFH
 
         private void btBearbeiten_Click(object sender, EventArgs e)
         {
-            if(lstWahlen.SelectedIndex != null)
+            if(lstWahlen.SelectedIndex != -1)
             {
                 FrmWahlkreise frm = new FrmWahlkreise(_wahlen[lstWahlen.SelectedIndex]);
                 frm.ShowDialog();

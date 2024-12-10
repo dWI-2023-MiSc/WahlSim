@@ -128,5 +128,10 @@ namespace WinWahlLFH
         {
 
         }
+
+        private void bntNaechsterStimmzettel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

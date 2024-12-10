@@ -26,6 +26,8 @@ namespace WinWahlLFH
 
         private List<Kandidat> kandidaten;
 
+        private List<Stimmzettel> stimmzettel;
+
         public Wahlkreis(string name, int id, int anzahlWahlberechtigte)
 
         {
@@ -38,6 +40,8 @@ namespace WinWahlLFH
 
             this.kandidaten = new List<Kandidat>(Program.alleKandidaten);
 
+            this.stimmzettel = new List<Stimmzettel>();
+
         }
         public Wahlkreis(Wahlkreis wahlkreis)
         {
@@ -45,6 +49,7 @@ namespace WinWahlLFH
             this.anzahlWahlberechtigte = wahlkreis.anzahlWahlberechtigte;
             this.name = wahlkreis.name;
             this.kandidaten = wahlkreis.kandidaten;
+            this.stimmzettel = wahlkreis.stimmzettel;
         }
 
         public string Name => $"{this.wahlkreisID}: {this.name} | {this.anzahlWahlberechtigte}";
@@ -101,7 +106,11 @@ namespace WinWahlLFH
             get { return this.kandidaten; }
             set { this.kandidaten = value; }
         }
-
+        public List<Stimmzettel> Stimmzettel
+        {
+            get { return this.stimmzettel; }
+            set { this.stimmzettel = value; }
+        }
 
     }
 
